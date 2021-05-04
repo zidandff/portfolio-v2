@@ -1,0 +1,610 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background-color: #03080D;
+}
+
+
+.btn-primary {
+    background-color: #03080D;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 30px 100px;
+    margin-top: 24px;
+    box-shadow: 10px 10px 0 #fff, 10px 10px 0 2px #03080D;
+    transition: .4s;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 0 ;
+}
+
+.btn-primary:hover {
+    box-shadow: -10px -10px 0 #03080D , -10px -10px 0 2px #fff;
+    transform: translate(10px, 10px);
+    background-color: #fff;
+    color: #03080D;
+}
+
+.fck-center {
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p, a, span, li, textarea, input {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sub-header {
+    font-size: 50px;
+}
+
+
+/* NAVBAR */
+nav {
+    width: 100%;
+    background: linear-gradient(to bottom, #000, rgba(255,255,255,0));
+    position: fixed;
+    z-index: 3;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 16px;
+    position: relative;
+}
+
+.nav-logo {
+    position: relative;
+    z-index: 4;
+}
+
+.nav-logo img {
+    width: 150px;
+}
+
+.nav-links {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #03080D;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    padding-top: 100px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #03080D;
+    padding-left: 30px;
+    padding-top: 24px;
+    font-size: 36px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #fff;
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.toggle-btn {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.line-menu {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+/* HERO */
+header {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.video-wrapper {
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.video-wrapper::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    background-color: #03080D;
+    transform-origin: bottom right;
+}
+
+.about-wrapper .video-wrapper::after {
+    display: none;
+}
+
+.liquid {
+    width: 100%;
+}
+
+.intro-text {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+}
+
+.intro-text h1 {
+    z-index: 2;
+    font-size: 60px;
+    overflow: hidden;
+}
+
+.intro-text h1 span {
+    font-family: 'Raleway', sans-serif;
+    display: block;
+}
+
+.intro-text {
+    position: relative;
+}
+
+.intro-text:nth-child(1) .video-wrapper {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    height: 500px;
+    top: -16px;
+    left: 0;
+}
+.intro-text:nth-child(1) .liquid {
+    width: 500px;
+    transform: rotate(90deg) translate(100px, 100px);
+}
+
+
+.video-wrapper{
+    display: none;
+}
+
+.intro-text:nth-child(3) .liquid {
+    transform: translateY(-50%);
+}
+
+/* ABOUT ME */
+#about {
+    margin-top: 150px;
+    padding-bottom: 80px;
+}
+
+.heading-about {
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.heading-about h1 {
+    position: absolute;
+}
+
+.about-wrapper {
+    justify-content: space-between;
+}
+
+.about-paragraf {
+    display: flex;
+    align-items: flex-end;
+    order: 3;
+    margin-top: 54px;
+}
+
+.about-paragraf .video-wrapper {
+    width: 20%;
+    height: 150px;
+    border-right: 20px solid #03080D;
+}
+
+.about-paragraf .video-wrapper .liquid {
+    width: 400px;
+}
+
+.about-paragraf p {
+    width: 100%;
+}
+
+.profile-pic img {
+    width: 100%;
+}
+
+.skills ul li,
+.sosmed ul li {
+    list-style: none;
+    border-bottom: 1px solid #fff;
+    margin: 20px 0;
+}
+
+.sosmed li a {
+    text-decoration: none;
+}
+
+.sosmed li a,
+.sosmed li .email {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* PROJECTS */
+
+#projects {
+    margin: 100px 0;
+}
+
+.marque {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.scroll-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.scrolling-text {
+    font-weight: 900;
+    font-size: 6em;
+    white-space: nowrap;
+    animation: scroll 20s -20s linear infinite;
+    will-change: transform;
+}
+
+.scrolling-text:nth-child(2){
+    animation: scroll2 20s -10s linear infinite;
+}
+
+.scrolling-text span:nth-child(even){
+    color: #03080D;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.project-item {
+    margin: 70px 0;
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+/* .project-img img{
+ transform: translateY(-100px);
+} */
+
+.project-desc {
+    align-self: flex-end;
+    margin-top: 16px;
+}
+
+.project-desc h1 {
+    font-size: 48px;
+}
+
+.project-img img {
+    width: 100%;
+}
+
+/* CONTACT ME */
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 24px 8px;
+    background-color: #0B1D2F;
+    border: none;
+    color: #fff;
+}
+
+.contact-form .personal {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.contact-form .personal input {
+    flex: 1;
+}
+
+.contact-form .fck-center {
+    margin-top: -20px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+/* footer */
+footer {
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+footer .copyright {
+    display: flex;
+    justify-content: space-between;
+}
+.to-top {
+    text-decoration: none;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes scroll2 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+@media (min-width: 768px){
+    /* HERO */
+    .intro-text {
+        position: static;
+    }
+
+    .intro-text:nth-child(1) .video-wrapper {
+        position: relative;
+        height: 80px;
+    }
+
+    .intro-text:nth-child(1) .liquid {
+        width: 100%;
+        transform: rotate(0) translate( 0, 0);
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .heading-about {
+        margin-bottom: 0;
+    }
+    
+    .intro-text h1 {
+        font-size: 60px;
+    }
+
+    .video-wrapper {
+        display: block;
+    }
+
+    .intro-text:nth-child(1) .video-wrapper{
+        border-left: 20px solid #03080D;
+    }
+
+    .intro-text:nth-child(2) .video-wrapper,
+    .intro-text:nth-child(3) .video-wrapper{
+        border-right: 20px solid #03080D;
+    }
+
+    .intro-text:nth-child(2) .liquid {
+        width: 250px;
+    }
+
+    .video-wrapper {
+        height: 80px;
+    }
+
+    .sub-header {
+        font-size: 50px;
+    }
+    
+    /* ABOUT ME */
+    .about-paragraf p {
+        width: 80%;
+    }
+    /* PROJECT */
+    .project-img {
+        height: 450px;
+    }
+    /* CONTACT ME */
+    .contact-form .personal {
+        flex-direction: row;
+    }
+    .contact-form .fck-center {
+        justify-content: flex-start;
+    }
+
+    /* footer */
+    footer {
+        margin-top: 24px;
+    }
+}
+
+@media (min-width: 992px){
+    /* NAVBAR */
+    .nav-links {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        flex-direction: row;
+        transform: translateY(0) !important;
+        padding-top: 0;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: #fff;
+        padding: 2px 0px;
+        margin: 0 24px;
+        font-size: 18px;
+        font-weight: 400;
+        transform: translate(0, 0) !important;
+        position: relative;
+        transition: .3s ease;
+        -webkit-text-stroke: 0px #fff;
+    }
+    .nav-links a:last-child {
+        margin-right: 0;
+    }
+
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform .3s ease;
+        transform-origin: bottom right;
+    }
+
+    .nav-links a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    
+    
+    .toggle-btn {
+        display: none;
+    }
+
+    /* HERO */
+    .intro-text h1 {
+        font-size: 70px;
+    }
+
+    .intro-text:nth-child(2) .liquid {
+        width: 300px;
+    }
+
+    .sub-header {
+        font-size: 80px;
+    }
+
+    /* ABOUT ME */
+    .about-paragraf {
+        order: 1;
+    }
+
+    .profile-pic {
+        order: 2;
+    }
+
+    .skills {
+        order: 3;
+    }
+
+    .skills ul li,
+    .sosmed ul li {
+        position: relative;
+        padding: 6px 4px;
+    }
+
+    .skills ul li::after,
+    .sosmed ul li::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: -1;
+        transform: scaleY(0);
+        transition: .3s ease;
+        transform-origin: bottom;
+    }
+
+    .skills ul li:hover,
+    .sosmed ul li:hover span,
+    .sosmed ul li:hover {
+        color: #03080D !important;
+    }
+
+    .sosmed ul li:hover svg path {
+        stroke: #03080D;
+    }
+
+    .skills ul li:hover::after,
+    .sosmed ul li:hover::after {
+        transform: scaleY(1);
+    }
+
+    /* PROJECTS */
+    .project-item:nth-child(even) .project-wrapper {
+        order: 2;
+    }
+
+    .project-item {
+        margin: 40px 0;
+    }
+
+    .project-item:nth-child(even) {
+        justify-content: flex-end;
+    }
+
+    .project-img {
+        height: 350px;
+    }
+
+    .project-desc {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px){
+    /* HERO */
+    .intro-text h1 {
+        font-size: 85px;
+    }
+    .video-wrapper {
+        height: 98px;
+    }
+}
