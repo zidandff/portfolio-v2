@@ -6,6 +6,14 @@ const navLinks = document.querySelectorAll('.nav-links a')
 const navLinksParent = document.querySelector('.nav-links')
 const mouseCursor = document.querySelector('.cursor')
 const projects = document.querySelectorAll('.project-item a')
+const preloader = document.querySelector('.preload')
+
+// document onload
+window.addEventListener('load', ()=> {
+    console.log("halo");
+    preloader.style.transform = 'translateY(-100%)';
+    heroAnim.play()
+})
 
 // Navbar animation GSAP
 const navAnim = gsap.timeline({paused: true}); 
@@ -61,7 +69,7 @@ function navOnHover(cursor, elem){
 }
 
 // Hero animation GSAP
-const heroAnim = gsap.timeline( {defaults: {duration: .7}, delay: .8 } );
+const heroAnim = gsap.timeline( {defaults: {duration: .7}, delay: .8, paused: true } );
 const videoMask = CSSRulePlugin.getRule(".video-wrapper::after")
 heroAnim.from(videoMask, {cssRule:{scaleX: 1, duration: 2}})
         .from('.intro-text h1 span', {y: '100%', stagger: .3})
