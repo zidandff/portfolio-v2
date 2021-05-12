@@ -102,8 +102,7 @@ const aboutAnim = gsap.timeline({
 })
 
 aboutAnim.to('#about .sub-header h1', {y: 50})
-            .to('.profile-pic', {y: -70}, '<')
-            .from('.about-paragraf p', {opacity: 0.6, x: 30}, "<")
+            .to('.profile-pic', {y: -50}, '<')
 
 // Smooth scroll
 const scroll = new SmoothScroll('a[href*="#"]');

@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: #fafafa;
 }
 
 body {
@@ -41,7 +41,7 @@ html {
 .bounce-item {
     width: 10px;
     height: 10px;
-    background-color: #fff;
+    background-color: #fafafa;
     margin: 16px 8px;
     animation: bounce .7s ease-in-out infinite alternate;
 }
@@ -117,7 +117,7 @@ html {
 #progress-bar {
     width: 6px;
     height: 0%;
-    background-color: #fff;
+    background-color: #fafafa;
     position: fixed;
     top: 0;
     right: 0;
@@ -150,7 +150,7 @@ html {
 .btn-primary:hover {
     box-shadow: -10px -10px 0 #03080D , -10px -10px 0 2px #fff;
     transform: translate(10px, 10px);
-    background-color: #fff;
+    background-color: #fafafa;
     color: #03080D;
 }
 
@@ -224,7 +224,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #fff;
+    color: #fafafa;
 }
 
 .toggle-btn {
@@ -240,7 +240,7 @@ nav {
 .line-menu {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: #fafafa;
 }
 
 /* HERO */
@@ -338,14 +338,14 @@ header {
 }
 
 .about-wrapper {
-    justify-content: space-between;
+    justify-content: space-between;;
 }
 
 .about-paragraf {
     display: flex;
     align-items: flex-end;
-    order: 3;
-    margin-top: 54px;
+    /* order: 2; */
+    margin: 0 0 30px 0;
 }
 
 .about-paragraf .video-wrapper {
@@ -360,6 +360,10 @@ header {
 
 .about-paragraf p {
     width: 100%;
+}
+
+.profile-pic {
+    margin: auto;
 }
 
 .profile-pic img {
@@ -462,7 +466,7 @@ header {
     padding: 24px 8px;
     background-color: #0B1D2F;
     border: none;
-    color: #fff;
+    color: #fafafa;
 }
 
 .contact-form .personal {
@@ -575,8 +579,18 @@ footer .copyright {
     }
     
     /* ABOUT ME */
+    .about-paragraf {
+        order: 3;
+    }
     .about-paragraf p {
         width: 80%;
+    }
+    .profile-pic {
+        margin: 0;
+        order: 1;
+    }
+    .skills {
+        order: 2;
     }
     /* PROJECT */
     .project-thumb {
@@ -618,7 +632,7 @@ footer .copyright {
     
     .nav-links a {
         text-decoration: none;
-        color: #fff;
+        color: #fafafa;
         padding: 16px 30px;
         /* margin: 0 24px; */
         font-size: 18px;
@@ -638,7 +652,7 @@ footer .copyright {
         display: block;
         width: 100%;
         height: 2px;
-        background-color: #fff;
+        background-color: #fafafa;
         bottom: 0;
         left: 0;
         transform: scaleX(0);
@@ -672,6 +686,7 @@ footer .copyright {
     /* ABOUT ME */
     .about-paragraf {
         order: 1;
+        margin-top: 54px;
     }
 
     .profile-pic {
@@ -696,7 +711,7 @@ footer .copyright {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
+        background-color: #fafafa;
         z-index: -1;
         transform: scaleY(0);
         transition: .3s ease;
