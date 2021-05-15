@@ -126,6 +126,13 @@ html {
     z-index: 5;
 }
 
+.maintenance-alert {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-primary {
     background-color: #03080D;
     text-decoration: none;
