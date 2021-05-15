@@ -15,6 +15,7 @@ html {
 
 #app {
     overflow-x: hidden;
+    padding-right: 6px;
 }
 
 .preload {
@@ -57,15 +58,6 @@ html {
 }
 .bounce-item:nth-child(5) {
     animation-delay: 400ms;
-}
-
-@keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-10px);
-    }
 }
 
 .cursor {
@@ -362,6 +354,19 @@ header {
     width: 100%;
 }
 
+.about-paragraf article {
+    line-height: 1.4rem;
+}
+
+.current-activity {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.current-activity li {
+    list-style: circle;
+}
+
 .profile-pic {
     margin: auto;
 }
@@ -426,7 +431,7 @@ header {
 }
 
 .project-item {
-    margin: 70px 0;
+    margin: 100px 0;
 }
 
 .project-thumb {
@@ -450,6 +455,21 @@ header {
 
 .project-desc h1 {
     font-size: 48px;
+}
+
+.link-project {
+    padding: 8px 0 4px 0;
+    border-bottom: 2px solid #fafafa;
+}
+
+.link-project a {
+    color: #fafafa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-project span {
+    font-size: 2rem;
 }
 
 /* CONTACT ME */
@@ -501,22 +521,6 @@ footer .copyright {
     text-decoration: none;
 }
 
-@keyframes scroll {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-@keyframes scroll2 {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-200%);
-    }
-}
 
 @media (min-width: 768px){
     .nav-logo img {
@@ -753,6 +757,10 @@ footer .copyright {
     .project-desc {
         margin: 0;
     }
+    
+    .link-project {
+        display: none;
+    }
 }
 
 @media (min-width: 1200px){
@@ -762,5 +770,31 @@ footer .copyright {
     }
     .video-wrapper {
         height: 98px;
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes scroll2 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
     }
 }

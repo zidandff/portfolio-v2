@@ -5,7 +5,7 @@ const line2 = document.querySelector('.line-menu:nth-child(2)')
 const navLinks = document.querySelectorAll('.nav-links a')
 const navLinksParent = document.querySelector('.nav-links')
 const mouseCursor = document.querySelector('.cursor')
-const projects = document.querySelectorAll('.project-item a')
+const projects = document.querySelectorAll('.project-thumb a')
 const preloader = document.querySelector('.preload')
 
 // document onload
