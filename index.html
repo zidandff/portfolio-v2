@@ -112,14 +112,14 @@
             <section id="about">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 sub-header">
-                            <h1>ABOUT ME</h1>
+                        <div class="col-12">
+                            <h1 class="sub-header">ABOUT ME</h1>
                         </div>
                     </div>
 
                     <div class="row about-wrapper">
                         <div class="col-lg-4 col-md-5 col-8 profile-pic">
-                            <img src="assets/images/final-pp-rev.jpg" alt="Profile picture">
+                            <img src="assets/images/profile-pic.jpg" alt="Profile picture">
                         </div>
 
                         <div class="col-lg-5 col-12 about-paragraf">
@@ -187,7 +187,7 @@
                                 </a>
                             </div>
                             <div class="link-project">
-                                <a href="https://perpus-smktelbdg.netlify.app/" target="_blank">VIEW PROJECT <span>&#8599</span></a target="_blank">
+                                <a href="https://moviessnack.netlify.app" target="_blank">VIEW PROJECT <span>&#8599</span></a target="_blank">
                             </div>
                         </div>
                         <div class="col-lg-3 project-desc">
@@ -244,15 +244,15 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-8 col-md-9 col-12">
-                            <form action="" class="contact-form">
+                            <form name="inquiry-form" class="contact-form">
                                 <div class="personal">
-                                    <input type="text" placeholder="Name">
-                                    <input type="email" placeholder="Email">
+                                    <input type="text" name="name" placeholder="Name" required>
+                                    <input type="email" name="email" placeholder="Email" required>
                                 </div>
-                                <input type="text" placeholder="Subject">
-                                <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+                                <input type="text" name="subject" placeholder="Subject" required>
+                                <textarea placeholder="Message" name="message" cols="30" rows="10" required></textarea>
                                 <div class="fck-center">
-                                    <button type="submit" class="btn-primary">SEND MESSAGE!</button>
+                                    <button type="submit" class="btn-primary btn-submit">SEND MESSAGE!</button>
                                 </div>
                             </form>
                         </div>
@@ -325,8 +325,25 @@
                         </a>
                     </div>
                 </div>
-            </footer>
-        </main>
+            </main>
+        </footer>
+        <!-- alert success -->
+        <div class="alert success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#61d800;transform:;-ms-filter:"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8s3.589-8,8-8 s8,3.589,8,8S16.411,20,12,20z"></path><path d="M9.999 13.587L7.7 11.292 6.288 12.708 10.001 16.413 16.707 9.707 15.293 8.293z"></path></svg>
+            <span>Your Mail has been sent Successfully!</span>
+            <div class="close-alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#fff;transform:;-ms-filter:"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
+            </div>
+        </div>
+        <!-- error message -->
+        <div class="alert error">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#b00020;transform:;-ms-filter:"><path d="M9.172 16.242L12 13.414 14.828 16.242 16.242 14.828 13.414 12 16.242 9.172 14.828 7.758 12 10.586 9.172 7.758 7.758 9.172 10.586 12 7.758 14.828z"></path><path d="M12,22c5.514,0,10-4.486,10-10S17.514,2,12,2S2,6.486,2,12S6.486,22,12,22z M12,4c4.411,0,8,3.589,8,8s-3.589,8-8,8 s-8-3.589-8-8S7.589,4,12,4z"></path></svg>
+            <span>Sorry your mail failed to send, please try again</span>
+            <div class="close-alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#fff;transform:;-ms-filter:"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>

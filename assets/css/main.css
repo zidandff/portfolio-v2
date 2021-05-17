@@ -73,6 +73,7 @@ html {
     transform: translate(-50%, -50%);
     z-index: 10;
     display: none;
+    opacity: 0;
 }
 
 .cursor.on-focus {
@@ -144,13 +145,19 @@ html {
     font-weight: 500;
     cursor: pointer;
     border-radius: 0 ;
+    display: flex;
+    align-items: center;
 }
 
-.btn-primary:hover {
+#projects .btn-primary:hover {
     box-shadow: -10px -10px 0 #03080D , -10px -10px 0 2px #fff;
     transform: translate(10px, 10px);
     background-color: #fafafa;
     color: #03080D;
+}
+
+.contact-form .btn-primary:hover {
+    box-shadow: 0 0 0 #fff;
 }
 
 .fck-center {
@@ -168,6 +175,8 @@ p, a, span, li, textarea, input {
 
 .sub-header {
     font-size: 50px;
+    /* display: inline; */
+    /* position: relative; */
 }
 
 
@@ -244,7 +253,7 @@ nav {
 
 /* HERO */
 header {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 50px;
 }
 
@@ -515,6 +524,25 @@ header {
     width: 100%;
 }
 
+.btn-spinner {
+    width: 24px;
+    height: 24px;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+    animation: spinner .7s linear infinite ;
+}
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
 /* footer */
 footer {
     margin-top: 48px;
@@ -528,8 +556,48 @@ footer .copyright {
     text-decoration: none;
 }
 
+.alert {
+    background-color: #06111B;
+    display: inline-block;
+    width: 90%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    /* opacity: 0; */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 18px 12px;
+    gap: 8px;
+    transition: .5s;
+}
+
+.close-alert {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.alert.active {
+    transform: translate(-50%, -20px);
+}
+
+.alert.success {
+    border-bottom: 2px solid #61d800;
+    border-left: 10px solid #61d800;
+}
+
+.alert.error {
+    border-bottom: 2px solid #b00020;
+    border-left: 10px solid #b00020;
+}
 
 @media (min-width: 768px){
+    header {
+        padding-top: 150px;
+    }
     .nav-logo img {
         width: 120px;
     }
@@ -585,9 +653,9 @@ footer .copyright {
         display: block;
     }
 
-    .sub-header {
+    /* .sub-header {
         font-size: 50px;
-    }
+    } */
     
     /* ABOUT ME */
     .about-paragraf {
@@ -767,6 +835,16 @@ footer .copyright {
     
     .link-project {
         display: none;
+    }
+    .alert {
+        width: 500px;
+        left: unset;
+        bottom: 0;
+        right: 0;
+        transform: translate( 100%, -50px);
+    }
+    .alert.active {
+        transform: translate( -50px, -50px);
     }
 }
 

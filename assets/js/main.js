@@ -7,6 +7,10 @@ const navLinksParent = document.querySelector('.nav-links')
 const mouseCursor = document.querySelector('.cursor')
 const projects = document.querySelectorAll('.project-thumb a')
 const preloader = document.querySelector('.preload')
+const btnForm = document.querySelector('.btn-submit')
+const alertSuccess = document.querySelector('.alert.success')
+const alertError = document.querySelector('.alert.error')
+const closeAlert = document.querySelectorAll('.close-alert')
 
 // document onload
 window.addEventListener('load', ()=> {
@@ -56,6 +60,7 @@ function followCursor(cursor, coordinate){
     cursor.style.left = coordinate.clientX + "px";
     cursor.style.width = '2rem';
     cursor.style.height = '2rem';
+    cursor.style.opacity = '1';
     cursor.classList.remove('on-focus');
 }
 
@@ -101,8 +106,8 @@ const aboutAnim = gsap.timeline({
     }
 })
 
-aboutAnim.to('#about .sub-header h1', {y: 50})
-            .to('.profile-pic', {y: -50}, '<')
+aboutAnim.from('#about .sub-header', {x: 50})
+            .to('.profile-pic', {y: -100}, '<')
 
 // Smooth scroll
 const scroll = new SmoothScroll('a[href*="#"]');
@@ -113,4 +118,36 @@ window.addEventListener("scroll", ()=> {
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
     document.getElementById("progress-bar").style.height = scrolled + "%";
+})
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxhrkivyuC8I20Ydvxqj2yULO7mAIBkStXsaxkwfy9CHAKzY96-2WMyCBLe8CVzEs8F/exec'
+const form = document.forms['inquiry-form']
+const btnOnload = '<div class="btn-spinner"></div>SENDING...'
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+btnForm.innerHTML = btnOnload
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        console.log('Success!', response)
+        btnForm.innerHTML = 'SEND MESSAGE!'
+        form.reset()
+
+        // alert when email succes sent
+        alertSuccess.classList.add('active')
+        alertError.classList.remove('active')
+    })
+    .catch(error => {
+        console.error('Error!', error.message)
+        btnForm.innerHTML = 'SEND MESSAGE!'
+        // alert when email failed sent
+        alertError.classList.add('active')
+        alertSuccess.classList.remove('active')
+    })
+})
+
+closeAlert.forEach(btn => {
+    btn.addEventListener('click',()=> {
+        btn.parentElement.classList.remove('active')
+    })
 })
